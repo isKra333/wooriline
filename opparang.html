@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wooriline | OPPA RANG</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body style="overflow: hidden; display: flex; flex-direction: column; height: 100vh;">
+
+    <!-- Header (GNB) -->
+    <header class="header" id="header">
+        <div class="header-inner">
+            <h1 class="logo">
+                <a href="index.html#hero">WOORILINE</a>
+            </h1>
+
+            <nav class="gnb">
+                <ul class="nav-list">
+                    <li><a href="about.html" data-i18n="nav_about">ABOUT</a></li>
+
+                    <li class="has-dropdown">
+                        <a href="#" class="active" onclick="return false;" data-i18n="nav_business">BUSINESS ▾</a>
+                        <ul class="dropdown">
+                            <li><a href="commerce.html" class="active" data-i18n="nav_commerce">Commerce Division</a>
+                            </li>
+                            <li><a href="game.html" data-i18n="nav_game">Game Division</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="global.html" data-i18n="nav_global">GLOBAL</a></li>
+                    <li><a href="contact.html" data-i18n="nav_contact">CONTACT</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-right">
+                <div class="lang-toggle">
+                    <button class="lang-btn active">KR</button>
+                    <span>|</span>
+                    <button class="lang-btn">EN</button>
+                </div>
+                <button class="mobile-menu-btn" aria-label="메뉴 열기">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content"
+        style="flex: 1; display: flex; flex-direction: column; padding-top: var(--header-height);">
+
+        <!-- Top Banner Area -->
+        <div
+            style="flex: 1; min-height: 0; background-image: url('img/opparang.jpg'); background-size: cover; background-position: center;">
+        </div>
+
+        <!-- Bottom Content Area -->
+        <div
+            style="flex: 0 0 auto; display: flex; justify-content: center; background: #fff; border-top: 1px solid var(--color-border); padding: 40px 20px;">
+            <div
+                style="display: flex; gap: 60px; align-items: center; justify-content: center; width: 100%; max-width: 1400px;">
+
+                <!-- Left: 대표 제품 이미지 3개 (Square) -->
+                <div style="flex: 1; max-width: 700px; display: flex; gap: 0;">
+                    <div
+                        style="flex: 1; aspect-ratio: 1 / 1; border: 1px solid var(--color-border); border-right: none;">
+                        <img src="img/pink.jpg" alt="Pink Product"
+                            style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                    </div>
+                    <div
+                        style="flex: 1; aspect-ratio: 1 / 1; border: 1px solid var(--color-border); border-right: none;">
+                        <img src="img/blue.jpg" alt="Blue Product"
+                            style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                    </div>
+                    <div style="flex: 1; aspect-ratio: 1 / 1; border: 1px solid var(--color-border);">
+                        <img src="img/nude.jpg" alt="Nude Product"
+                            style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                    </div>
+                </div>
+
+                <!-- Right: 텍스트 정보 및 외부 링크 -->
+                <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; max-width: 450px;">
+                    <span style="font-size: 15px; color: var(--color-black); margin-bottom: 5px;"
+                        data-i18n="oppa_sub">욕실 라이프 스타일의 새로운
+                        정의</span>
+                    <h2 style="font-size: 32px; font-weight: 900; color: var(--color-black); margin-bottom: 20px; letter-spacing: -0.05em;"
+                        data-i18n="oppa_title">
+                        오빠랑</h2>
+
+                    <p style="font-size: 14px; color: var(--color-black); line-height: 1.6; margin-bottom: 30px; word-break: keep-all;"
+                        data-i18n="oppa_desc">
+                        오빠랑은 동남아시아 욕실 스타일을 새롭게 정의하며<br>
+                        나만의 프라이빗한 순간을 한국적인 판타지와 기술적<br>
+                        완벽함으로 채울 수 있는 욕실용품 전문 브랜드 입니다.
+                    </p>
+
+                    <!-- 외부 링크 버튼 영역 -->
+                    <div class="brand-action-buttons" style="display: flex; gap: 10px;">
+                        <a href="https://shopee.vn/kocos.soon100u" target="_blank" class="btn-ghost"
+                            style="flex: 1; padding: 15px 5px; text-transform: none; text-align: center; font-size: 13px; font-weight: 500;"
+                            data-i18n="oppa_vn_btn">
+                            베트남 공식 판매처 →
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-info">
+                <div class="footer-logo">Wooriline Co., Ltd.</div>
+                <address style="font-family: Arial, sans-serif;" data-i18n="footer_addr_2">
+                    607 Office, 358-39, Hosu-ro, Ilsandong-gu, Goyang-si, Gyeonggi-do, South Korea<br>
+                    TEL. +82-31-901-9572
+                </address>
+                <span class="copyright" style="font-family: Arial, sans-serif;">Copyright &copy; Wooriline All Rights
+                    Reserved</span>
+            </div>
+            <div class="footer-contact">
+                <a href="contact.html" class="btn-ghost smooth-scroll"
+                    style="text-transform: none; border: none; padding: 0;" data-i18n="footer_contact_btn">사업 문의하기 →</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/lang.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

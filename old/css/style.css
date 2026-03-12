@@ -1,0 +1,751 @@
+/* 기본 설정 및 웹폰트 (Pretendard) */
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+:root {
+    --color-black: #000000;
+    --color-white: #ffffff;
+    --color-gray-dark: #333333;
+    --color-gray-light: #999999;
+    --color-border: #e0e0e0;
+    --header-height: 80px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+    color: var(--color-black);
+    background-color: var(--color-white);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: -0.02em;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--header-height);
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.header.scrolled {
+    border-bottom: 1px solid var(--color-border);
+}
+
+.header-inner {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 40px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.logo a {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+}
+
+/* GNB Navigation */
+.gnb {
+    display: flex;
+}
+
+.nav-list {
+    display: flex;
+    gap: 50px;
+}
+
+.nav-list>li {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.nav-list>li>a {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 0;
+    position: relative;
+}
+
+/* Hover Effect - Underline */
+.nav-list>li>a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--color-black);
+    transition: width 0.3s ease;
+}
+
+.nav-list>li>a:hover::after {
+    width: 100%;
+}
+
+/* Dropdown Menu */
+.has-dropdown {
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: absolute;
+    top: calc(100% + 15px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    padding: 20px 25px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    min-width: 200px;
+    text-align: center;
+}
+
+.has-dropdown:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.dropdown li {
+    margin-bottom: 15px;
+}
+
+.dropdown li:last-child {
+    margin-bottom: 0;
+}
+
+.dropdown a {
+    font-size: 13px;
+    color: var(--color-gray-light);
+    transition: color 0.3s ease;
+}
+
+.dropdown a:hover {
+    color: var(--color-black);
+    font-weight: 600;
+}
+
+/* Language Toggle */
+.lang-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--color-gray-light);
+}
+
+.lang-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 13px;
+    color: var(--color-gray-light);
+    transition: color 0.3s ease;
+}
+
+.lang-btn.active,
+.lang-btn:hover {
+    color: var(--color-black);
+    font-weight: 600;
+}
+
+/* Mobile Menu Button - Hidden on Desktop */
+.mobile-menu-btn {
+    display: none;
+}
+
+/* Hero Section (Main Page) */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 120px 20px 80px;
+    background-color: var(--color-white);
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-size: 80px;
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 30px;
+    letter-spacing: -0.04em;
+    color: var(--color-black);
+}
+
+.hero-subtitle {
+    font-size: 22px;
+    color: var(--color-gray-dark);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+}
+
+/* Utilities */
+.mt-60 {
+    margin-top: 60px;
+}
+
+/* Buttons */
+.btn-ghost {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 30px;
+    border: 1px solid var(--color-black);
+    color: var(--color-black);
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    background: transparent;
+    cursor: pointer;
+}
+
+.btn-large {
+    padding: 18px 45px;
+    font-size: 15px;
+    letter-spacing: 0.05em;
+}
+
+.btn-ghost:hover {
+    background: var(--color-black);
+    color: var(--color-white);
+}
+
+/* Animations */
+.fade-in-up {
+    /* 기존 자바스크립트 등 간섭 시에도 무조건 보이도록 1, none으로 강제 지정 */
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+}
+
+.is-visible .fade-in-up {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Footer */
+.footer {
+    border-top: 1px solid var(--color-border);
+    padding: 80px 40px;
+}
+
+.footer-inner {
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer-info {
+    font-size: 13px;
+    color: var(--color-gray-light);
+    line-height: 1.8;
+}
+
+.footer-logo {
+    font-size: 18px;
+    color: var(--color-black);
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.footer-info address {
+    font-style: normal;
+    margin-bottom: 30px;
+}
+
+.copyright {
+    display: block;
+}
+
+/* Ghost Button (사업 문의하기) */
+.btn-ghost {
+    display: inline-block;
+    padding: 15px 30px;
+    border: 1px solid var(--color-black);
+    color: var(--color-black);
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+.btn-ghost:hover {
+    background: var(--color-black);
+    color: var(--color-white);
+}
+
+/* About Section */
+.about-section {
+    padding: 150px 20px;
+    /* 기존 섹션(히어로)이 겹치지 않게 패딩 높임 */
+    background-color: #fafafa;
+    display: block !important;
+    min-height: 500px;
+    position: relative;
+    z-index: 10;
+}
+
+.content-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Vision Area */
+.vision-area {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.section-title {
+    font-size: 50px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.section-subtitle {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    color: var(--color-gray-dark);
+}
+
+.section-desc {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--color-gray-dark);
+}
+
+/* Common Area Title */
+.area-title {
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--color-black);
+    letter-spacing: -0.02em;
+}
+
+.mt-120 {
+    margin-top: 120px;
+}
+
+.mt-40 {
+    margin-top: 40px;
+}
+
+/* Timeline Area */
+.timeline-area {
+    padding: 80px 0;
+    margin-bottom: 150px;
+    background-color: transparent !important;
+}
+
+.timeline-list {
+    position: relative;
+    padding-left: 40px;
+}
+
+.timeline-list::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 2px;
+    height: 100%;
+    background-color: var(--color-border);
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 60px;
+    margin-bottom: 80px;
+    opacity: 0.3;
+    /* 스크롤 전 흐리게 시작 */
+    transform: translateX(30px);
+    transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* Fallback: JS가 작동하지 않을 경우를 대비해 1초 뒤 무조건 렌더링되도록 애니메이션 추가 */
+@keyframes fallbackTimeline {
+    to {
+        opacity: 0.8;
+        transform: translateX(0);
+    }
+}
+
+.timeline-item {
+    animation: fallbackTimeline 0.5s ease-out 1s forwards;
+    /* 1초 대기 후 강제 노출 */
+}
+
+/* 스크롤 시 강조 효과용 클래스 (JS에서 제어) */
+.timeline-item.active {
+    opacity: 1 !important;
+    /* 강제 노출 애니메이션을 덮어씀 */
+    transform: translateX(0) !important;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: -26px;
+    /* 선과의 간격 재조정 */
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: var(--color-border);
+    transition: all 0.4s ease;
+}
+
+.timeline-item.active::before {
+    transform: scale(1.5);
+    background-color: var(--color-black);
+}
+
+.timeline-year {
+    display: block;
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: var(--color-gray-dark) !important;
+    /* 강제 지정 해제, 원래 색으로 */
+    letter-spacing: -0.03em;
+    transition: all 0.4s ease;
+}
+
+.timeline-item.active .timeline-year {
+    color: var(--color-black) !important;
+    font-size: 42px;
+    /* 활성화 시 연도 더 크게 확대 */
+}
+
+.timeline-content {
+    display: block;
+    font-size: 18px;
+    color: var(--color-gray-light) !important;
+    line-height: 1.8;
+    transition: all 0.4s ease;
+    font-weight: 400;
+}
+
+.timeline-item.active .timeline-content {
+    color: var(--color-black) !important;
+    font-weight: 500;
+}
+
+/* Info Table Area */
+.info-layout {
+    display: flex;
+    gap: 60px;
+    align-items: stretch;
+}
+
+.info-logo-box {
+    flex: 0 0 300px;
+    border: 1px solid var(--color-border);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-white);
+    padding: 40px;
+}
+
+.logo-placeholder {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--color-gray-light);
+    text-align: center;
+    line-height: 1.2;
+}
+
+.info-table-wrap {
+    flex: 1;
+}
+
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-top: 1px solid var(--color-black);
+}
+
+.info-table th,
+.info-table td {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--color-border);
+    text-align: left;
+    font-size: 15px;
+}
+
+.info-table th {
+    width: 150px;
+    font-weight: 600;
+    color: var(--color-black);
+}
+
+.info-table td {
+    color: var(--color-gray-dark);
+    line-height: 1.6;
+}
+
+/* Business Section */
+.division-area {
+    padding: 150px 20px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.game-area {
+    background-color: #fafafa;
+}
+
+.division-header {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.division-badge {
+    display: inline-block;
+    padding: 8px 20px;
+    border: 1px solid var(--color-black);
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 30px;
+    margin-bottom: 30px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.feature-card {
+    padding: 50px 40px;
+    background: #f9f9f9;
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.game-area .feature-card {
+    background: #fff;
+    border: 1px solid var(--color-border);
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+.feature-card h4 {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.feature-card p {
+    font-size: 15px;
+    color: var(--color-gray-dark);
+    line-height: 1.6;
+}
+
+.brand-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.brand-card {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    padding: 80px;
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    transition: box-shadow 0.4s ease;
+}
+
+.brand-card:hover {
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
+}
+
+.brand-logo {
+    flex: 0 0 360px;
+    height: 360px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f4f4f4;
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--color-gray-light);
+}
+
+.brand-info {
+    flex: 1;
+}
+
+.brand-info h5 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-gray-dark);
+    margin-bottom: 15px;
+}
+
+.brand-info h3 {
+    font-size: 46px;
+    font-weight: 800;
+    margin-bottom: 30px;
+    letter-spacing: -0.02em;
+}
+
+.brand-info p {
+    font-size: 18px;
+    color: var(--color-gray-dark);
+    line-height: 1.8;
+}
+
+.brand-links {
+    display: flex;
+    gap: 30px;
+}
+
+.text-link {
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    transition: color 0.3s ease;
+}
+
+.text-link:hover {
+    color: var(--color-gray-light);
+}
+
+.platform-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.platform-card {
+    padding: 80px 60px;
+    background: var(--color-white);
+    text-align: center;
+    border: 1px solid var(--color-border);
+    transition: all 0.4s ease;
+}
+
+.platform-card:hover {
+    background: var(--color-black);
+    color: var(--color-white);
+    transform: translateY(-10px);
+}
+
+.platform-card h3 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    letter-spacing: 0.05em;
+}
+
+.platform-card p {
+    font-size: 16px;
+    color: var(--color-gray-light);
+    margin-bottom: 30px;
+    transition: color 0.4s ease;
+}
+
+.platform-card:hover p {
+    color: #e0e0e0;
+}
+
+.platform-card .text-link {
+    display: inline-block;
+    font-size: 24px;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+
+    /* 기존 스타일 유지... */
+    .gnb {
+        display: none;
+    }
+
+
+    .mobile-menu-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 20px;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .mobile-menu-btn span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: var(--color-black);
+        transition: all 0.3s ease;
+    }
+
+    .hero-title {
+        font-size: 50px;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        gap: 50px;
+    }
+}

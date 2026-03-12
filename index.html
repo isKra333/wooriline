@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wooriline | Beyond Borders, Creating Value</title>
+    <meta name="description" content="국경을 넘어 새로운 가치를 창출하는 글로벌 기업 (주)우리라인">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="home" style="overflow: hidden; display: flex; flex-direction: column; height: 100vh;">
+
+    <!-- Header (GNB) -->
+    <header class="header" id="header">
+        <div class="header-inner">
+            <h1 class="logo">
+                <a href="#hero" class="smooth-scroll">WOORILINE</a>
+            </h1>
+
+            <nav class="gnb">
+                <ul class="nav-list">
+                    <li><a href="about.html" data-i18n="nav_about">ABOUT</a></li>
+
+                    <li class="has-dropdown">
+                        <a href="#" onclick="return false;" data-i18n="nav_business">BUSINESS ▾</a>
+                        <ul class="dropdown">
+                            <li><a href="commerce.html" data-i18n="nav_commerce">Commerce Division</a></li>
+                            <li><a href="game.html" data-i18n="nav_game">Game Division</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="global.html" data-i18n="nav_global">GLOBAL</a></li>
+                    <li><a href="contact.html" data-i18n="nav_contact">CONTACT</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-right">
+                <div class="lang-toggle">
+                    <button class="lang-btn active">KR</button>
+                    <span>|</span>
+                    <button class="lang-btn">EN</button>
+                </div>
+                <button class="mobile-menu-btn" aria-label="메뉴 열기">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content" style="flex: 1; display: flex; flex-direction: column;">
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section"
+            style="flex: 1; min-height: auto; background-image: url('img/main.jpg'); background-size: cover; background-position: center; position: relative;">
+            <!-- 가독성을 높이기 위한 어두운 오버레이 추가 -->
+            <div
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.3);">
+            </div>
+
+            <div class="content-inner fade-in-safe" style="position: relative; z-index: 1;">
+                <h2 class="hero-title" style="color: #ffffff; text-shadow: 2px 2px 8px rgba(0,0,0,0.4);">Beyond
+                    Borders,<br>Creating Value</h2>
+                <p class="hero-subtitle"
+                    style="color: rgba(255, 255, 255, 0.95); text-shadow: 1px 1px 6px rgba(0,0,0,0.4);"
+                    data-i18n="hero_subtitle">국경을 넘어 새로운 가치를
+                    창출하는 글로벌 기업</p>
+                <div class="hero-action mt-60">
+                    <a href="about.html" class="btn-ghost"
+                        style="color: #ffffff; border-color: rgba(255, 255, 255, 0.6); background-color: rgba(0,0,0,0.2);"
+                        data-i18n="hero_btn">WOORILINE
+                        STORY</a>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-info">
+                <div class="footer-logo">Wooriline Co., Ltd.</div>
+                <address style="font-family: Arial, sans-serif;" data-i18n="footer_addr_2">
+                    607 Office, 358-39, Hosu-ro, Ilsandong-gu, Goyang-si, Gyeonggi-do, South Korea<br>
+                    TEL. +82-31-901-9572
+                </address>
+                <span class="copyright" style="font-family: Arial, sans-serif;">Copyright &copy; Wooriline All Rights
+                    Reserved</span>
+            </div>
+            <div class="footer-contact">
+                <a href="contact.html" class="btn-ghost smooth-scroll"
+                    style="text-transform: none; border: none; padding: 0;" data-i18n="footer_contact_btn">사업 문의하기 →</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/lang.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

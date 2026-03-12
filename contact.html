@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wooriline | Contact</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Header (GNB) -->
+    <header class="header" id="header">
+        <div class="header-inner">
+            <h1 class="logo">
+                <a href="index.html#hero">WOORILINE</a>
+            </h1>
+
+            <nav class="gnb">
+                <ul class="nav-list">
+                    <li><a href="about.html" data-i18n="nav_about">ABOUT</a></li>
+
+                    <li class="has-dropdown">
+                        <a href="#" onclick="return false;" data-i18n="nav_business">BUSINESS ▾</a>
+                        <ul class="dropdown">
+                            <li><a href="commerce.html" data-i18n="nav_commerce">Commerce Division</a></li>
+                            <li><a href="game.html" data-i18n="nav_game">Game Division</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="global.html" data-i18n="nav_global">GLOBAL</a></li>
+                    <li><a href="contact.html" class="active" data-i18n="nav_contact">CONTACT</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-right">
+                <div class="lang-toggle">
+                    <button class="lang-btn active">KR</button>
+                    <span>|</span>
+                    <button class="lang-btn">EN</button>
+                </div>
+                <button class="mobile-menu-btn" aria-label="메뉴 열기">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <section class="contact-redesign-area page-padding">
+            <div class="content-inner fade-in-safe">
+
+                <!-- 1. 메인 타이포그래피 (상단 섹션) -->
+                <div class="contact-hero mt-60">
+                    <h2 class="contact-main-title">Connecting Ideas, Building Value</h2>
+                    <h3 class="contact-sub-title mt-20" data-i18n="contact_sub">아이디어를 연결하여 더 큰 가치를 만듭니다.</h3>
+                    <p class="contact-desc mt-40" data-i18n="contact_desc">
+                        우리라인은 아시아 시장의 풍부한 경험과 전문성을 바탕으로 글로벌 비즈니스의 새로운 표준을 제시합니다. 게임<br>
+                        서비스의 운영부터 브랜드 커머스의 소싱과 유통까지, 국경의 장벽을 허물고 무한한 가능성을 연결하는 허브로서<br>
+                        파트너와 함께 지속 가능한 동반 성장을 실현해 나갑니다
+                    </p>
+                </div>
+
+                <!-- 2. 중앙 연락처 정보 -->
+                <div class="contact-info-block mt-120">
+                    <div class="info-group">
+                        <h4 class="info-label" data-i18n="contact_kr_t">한국 본사</h4>
+                        <div class="info-line"></div>
+                        <p class="info-text" data-i18n="contact_kr_a">경기도 고양시 일산동구 호수로 358-39 607호 (031-901-9572)</p>
+                    </div>
+
+                    <div class="email-group mt-60">
+                        <div class="email-item">
+                            <span class="email-label" data-i18n="contact_dept_com">커머스사업부</span>
+                            <a href="mailto:kys@wooriline.com" class="email-link">kys@wooriline.com</a>
+                        </div>
+                        <div class="email-item">
+                            <span class="email-label" data-i18n="contact_dept_game">게임사업부</span>
+                            <a href="mailto:warofwar@wooriline.com" class="email-link">warofwar@wooriline.com</a>
+                        </div>
+                    </div>
+
+                    <p class="info-notice mt-60" data-i18n="contact_notice">
+                        프로젝트 제안이나 서비스 이용에 관한 궁금한 점을 남겨주세요.<br>
+                        담당자가 확인 후 신속하게 답변해 드리겠습니다.
+                    </p>
+                </div>
+
+                <!-- 3. 하단 클로징 섹션 -->
+                <div class="contact-closing mt-120 mb-80">
+                    <p data-i18n="contact_closing">브랜드 커머스부터 게임 서비스까지, 우리라인의 글로벌 네트워크는 언제나 열려 있습니다. 새로운 가능성을 현실로 만들 파트너를
+                        기다립니다.</p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-info">
+                <div class="footer-logo">Wooriline Co., Ltd.</div>
+                <address style="font-family: Arial, sans-serif;" data-i18n="footer_addr_2">
+                    607 Office, 358-39, Hosu-ro, Ilsandong-gu, Goyang-si, Gyeonggi-do, South Korea<br>
+                    TEL. +82-31-901-9572
+                </address>
+                <span class="copyright" style="font-family: Arial, sans-serif;">Copyright &copy; Wooriline All Rights
+                    Reserved</span>
+            </div>
+            <div class="footer-contact">
+                <a href="contact.html" class="btn-ghost smooth-scroll"
+                    style="text-transform: none; border: none; padding: 0;" data-i18n="footer_contact_btn">사업 문의하기 →</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/lang.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

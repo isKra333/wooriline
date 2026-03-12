@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wooriline | Commerce Division</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Header (GNB) - 고정 및 하이브리드 링크 적용 -->
+    <header class="header" id="header">
+        <div class="header-inner">
+            <h1 class="logo">
+                <a href="index.html#hero">WOORILINE</a>
+            </h1>
+
+            <nav class="gnb">
+                <ul class="nav-list">
+                    <li><a href="about.html" data-i18n="nav_about">ABOUT</a></li>
+
+                    <li class="has-dropdown">
+                        <a href="#" class="active" onclick="return false;" data-i18n="nav_business">BUSINESS ▾</a>
+                        <ul class="dropdown">
+                            <li><a href="commerce.html" class="active" data-i18n="nav_commerce">Commerce Division</a>
+                            </li>
+                            <li><a href="game.html" data-i18n="nav_game">Game Division</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="global.html" data-i18n="nav_global">GLOBAL</a></li>
+                    <li><a href="contact.html" data-i18n="nav_contact">CONTACT</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-right">
+                <div class="lang-toggle">
+                    <button class="lang-btn active">KR</button>
+                    <span>|</span>
+                    <button class="lang-btn">EN</button>
+                </div>
+                <button class="mobile-menu-btn" aria-label="메뉴 열기">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Commerce Division Container -->
+        <section class="division-area page-padding">
+            <div class="content-inner fade-in-safe">
+                <div class="division-header">
+                    <h3 class="section-title">Growing Brands Together</h3>
+                    <p class="section-subtitle mt-20" style="color: #000; font-size: 20px;" data-i18n="com_sub">브랜드와 함께
+                        성장합니다.</p>
+                    <p class="section-desc mt-40" data-i18n="com_desc">
+                        우리라인은 글로벌 시장을 읽는 날카로운 통찰력을 바탕으로 유망한 제품을 발굴하고, 이를 독자적인 브랜드로 성장시키는<br>
+                        커머스 솔루션을 제공합니다. 제품 소싱부터 마케팅, 국내외 온·오프라인 유통까지 아우르는 통합 시스템을 구축하여,<br>
+                        파트너와 고객 모두에게 지속 가능한 비즈니스 가치를 전달하는 글로벌 유통 허브로 도약하고 있습니다
+                    </p>
+                </div>
+
+                <!-- 핵심 역량 (Commerce) -->
+                <div class="feature-grid mt-60">
+                    <div class="feature-card" style="padding: 40px 30px;">
+                        <h4 data-i18n="com_f1_t">Market Insight</h4>
+                        <p data-i18n="com_f1_d">트렌드를 분석하여 성공 가능성이 높은<br>브랜드를 기획하는 안목</p>
+                    </div>
+                    <div class="feature-card" style="padding: 40px 30px;">
+                        <h4 data-i18n="com_f2_t">Global Sourcing</h4>
+                        <p data-i18n="com_f2_d">전 세계 네트워크를 활용한 최적화된 제품 수급<br>및 공급 인프라</p>
+                    </div>
+                    <div class="feature-card" style="padding: 40px 30px;">
+                        <h4 data-i18n="com_f3_t">Strategic Marketing</h4>
+                        <p data-i18n="com_f3_d">온,오프라인 경계를 허무는 타겟 맞춤형 브랜딩<br>전략</p>
+                    </div>
+                </div>
+
+                <!-- 브랜드 쇼케이스 -->
+                <div class="brand-grid mt-120"
+                    style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; margin-top: 150px;">
+                    <!-- SOON 100 U -->
+                    <div class="brand-card" style="height: 250px; padding: 0; overflow: hidden; cursor: pointer;"
+                        onclick="location.href='soon100u.html'">
+                        <img src="img/logosoon100u.jpg" alt="SOON 100 U"
+                            style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                    </div>
+
+                    <!-- OPPA RANG -->
+                    <div class="brand-card" style="height: 250px; padding: 0; overflow: hidden; cursor: pointer;"
+                        onclick="location.href='opparang.html'">
+                        <img src="img/logooppa.jpg" alt="OPPA RANG"
+                            style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-info">
+                <div class="footer-logo">Wooriline Co., Ltd.</div>
+                <address style="font-family: Arial, sans-serif;" data-i18n="footer_addr_2">
+                    607 Office, 358-39, Hosu-ro, Ilsandong-gu, Goyang-si, Gyeonggi-do, South Korea<br>
+                    TEL. +82-31-901-9572
+                </address>
+                <span class="copyright" style="font-family: Arial, sans-serif;">Copyright &copy; Wooriline All Rights
+                    Reserved</span>
+            </div>
+            <div class="footer-contact">
+                <a href="contact.html" class="btn-ghost smooth-scroll"
+                    style="text-transform: none; border: none; padding: 0;" data-i18n="footer_contact_btn">사업 문의하기 →</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/lang.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
